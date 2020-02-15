@@ -1,10 +1,14 @@
-version: 2
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
 jobs:
   deploy:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
     steps:
       - checkout
+      - ruby/bundle-install
       - run: npm install
       - run: bundle install
       - run: bundle exec jekyll build
