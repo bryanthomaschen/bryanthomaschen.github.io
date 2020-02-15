@@ -4,6 +4,9 @@ jobs:
   deploy:
     docker:
       - image: circleci/ruby:2.6.3-node-browsers
+    environment:
+      BRANCH: develop
+      TARGET_REPO: bryanthomaschen/bryanthomaschen.github.io
     steps:
       - run:
           name: Force Bundler Version
