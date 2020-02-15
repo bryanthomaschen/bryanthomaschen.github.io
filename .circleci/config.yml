@@ -5,10 +5,9 @@ orbs:
 jobs:
   deploy:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
+      - image: circleci/ruby:2.6.3-node-browsers
     steps:
       - checkout
-      - ruby/bundle-install
       - run: npm install
       - run: bundle install
       - run: bundle exec jekyll build
