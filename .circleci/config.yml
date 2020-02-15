@@ -12,6 +12,9 @@ jobs:
             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
             source $BASH_ENV
             gem install bundler
+      - add_ssh_keys:
+          fingerprints:
+            - "97:82:49:6e:71:b8:e9:f0:c7:0b:17:a0:6f:bc:0a:92"
       - checkout
       - run: npm install
       - run: bundle install
