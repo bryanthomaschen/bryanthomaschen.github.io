@@ -1,9 +1,9 @@
-version: 2.1
+version: 2
 orbs:
   ruby: circleci/ruby@0.1.2 
 
 jobs:
-  build:
+  deploy:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
     executor: default
