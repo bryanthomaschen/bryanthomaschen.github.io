@@ -2,10 +2,9 @@ version: 2
 
 jobs:
   deploy:
-    filters:
-      branches:
-        only:
-          - develop
+    branches:
+      only:
+        - develop
     docker:
       - image: circleci/ruby:2.6.3-node-browsers
     environment:
